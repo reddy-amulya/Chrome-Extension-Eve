@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@1,300&display=swap');
+h2{
+    font-family: 'Georama', sans-serif;
+    color: white;
+    margin-top: 0.5em;
+}
+button {
+    margin-top: 0.5em;
+    border-radius: .25em;
+    font-size: 1.2em;
+    color:black;
+    background-color: whitesmoke;
+}
+body {
+    background-color: #242b5e;
+}
