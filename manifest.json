@@ -1,0 +1,31 @@
+{
+  "name": "Eve",
+  "manifest_version": 2,
+  "version": "0.4",
+  "description": "Summarizes the context of the webpage",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "declarativeContent",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {"matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "/images/4.png",
+    "32": "/images/4.png",
+    "48": "/images/4.png",
+    "128": "/images/4.png"
+  }
+}
