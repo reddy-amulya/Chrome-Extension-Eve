@@ -1,6 +1,5 @@
 // Add functionality to highlight important parts of text
 // use fetch instead of xml http request
-// figure out how to inject script in more aesthetic way
 // add code to handle incorrect input cases
 
 let xhr = new XMLHttpRequest();
