@@ -9,8 +9,27 @@ xhr.withCredentials = true;
 xhr.addEventListener("readystatechange", function () {
 	if (this.readyState === this.DONE) {
 		console.log(this.responseText);
-        let index=this.responseText.search("article_text")
-        document.body.innerHTML=this.responseText.substring(13,index-4);
+        let index=this.responseText.search("article_text");
+        let summary = this.responseText.substring(13,index-4);
+        console.log('Response : ',summary);
+        const content = `
+        <div class="eve-summary">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <h1> Text Summary </h1>
+                        <p style="margin-bottom: 2em">${summary}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+        let newDiv = document.createElement("div");
+        newDiv.innerHTML = content;
+        document.querySelector("body").prepend(newDiv);
+        document.getElementById('id01').style.display='block';
     }
 });
 
