@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Georama:ital,wght@1,300&display=swap');
+.eve-summary h1{
+    text-align: center;
+    font-family: 'Georama', sans-serif;
+    color:darkblue;
+    margin-bottom: 0.5em;
+}
