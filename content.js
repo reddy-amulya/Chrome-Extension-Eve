@@ -1,30 +1,48 @@
 // Add functionality to highlight important parts of text
+// Add functionality to identify sentiment of text
+// modify popup UI
 // add code to handle incorrect input cases
+// modify fetch url
+// add spinner to UI while loading
 
 function summarize(url){
-    var response;
-    const data = JSON.stringify({
-        "url": url,
-        "min_length": 100,
-        "max_length": 300,
-        "is_detailed": false
-    });
-    fetch("https://tldrthis.p.rapidapi.com/v1/model/abstractive/summarize-url/", {
+    fetch("https://flask-serverx.azurewebsites.net/getSummary", {
+        "body": JSON.stringify({"url":url}),
         "method": "POST",
-        "headers": {
-            "Content-Type": "application/json",
-            "x-rapidapi-key": "token",
-            "x-rapidapi-host": "tldrthis.p.rapidapi.com"
-        },
-	    "body": data
+        "headers":{
+            "Content-Type": "application/json"
+        }
+    }).then(response=> response.body). then(rb => {
+        const reader = rb.getReader();
+        // https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream#example-fetch-stream
+        return new ReadableStream({
+        start(controller) {
+            // The following function handles each data chunk
+            function push() {
+            // "done" is a Boolean and value a "Uint8Array"
+            reader.read().then( ({done, value}) => {
+                // If there is no more data to read
+                if (done) {
+                controller.close();
+                return;
+                }
+                // Get the data and send it to the browser via the controller
+                controller.enqueue(value);
+                push();
+            })
+            }
+            push();
+        }
+        });
     })
-    .then(function(response) {
-        return response.json();
-    }).then(function(data) {
-        // `data` is the parsed version of the JSON returned from the above endpoint.
-        console.log(data);
-        response = data.summary[0];
-        console.log('Response : ',response);
+    .then(stream => {
+        // Respond with our stream
+        return new Response(stream, { headers: { "Content-Type": "text/html" } }).text();
+    })
+    .then(result => {
+        // Do things with result
+        console.log(result);
+        console.log('Response : ',result);
         const content = `
         <div class="eve-summary">
             <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -33,7 +51,7 @@ function summarize(url){
                     <div class="w3-container">
                         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <h1> Text Summary </h1>
-                        <p style="margin-bottom: 2em">${response}</p>
+                        <p style="margin-bottom: 2em ; color="black" ">${result}</p>
                     </div>
                 </div>
             </div>
@@ -43,7 +61,7 @@ function summarize(url){
         newDiv.innerHTML = content;
         document.querySelector("body").prepend(newDiv);
         document.getElementById('id01').style.display='block';
-    });
+  }).catch(e=>console.log('Error : ',e));
 }
 
 function highlight() {

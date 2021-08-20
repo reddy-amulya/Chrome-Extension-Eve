@@ -1,0 +1,2 @@
+Approach1:
+Deploy a server to run the python code and make the web frontend interact with it.
