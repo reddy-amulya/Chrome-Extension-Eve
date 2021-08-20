@@ -1,20 +1,25 @@
-// Add functionality to highlight important parts of text
-// Add functionality to identify sentiment of text
-// modify popup UI
-// add code to handle incorrect input cases
-// modify fetch url
-// add spinner to UI while loading
+fetch("https://api.nlpcloud.io/v1/bart-large-cnn/summarization", {
+  "body": JSON.stringify({"text":"One month after the United States began what has become a troubled rollout of a national COVID vaccination campaign, the effort is finally"}),
+  "headers": {
+    "Authorization": "Token 8fb4f68656d2f4edd038d83f71000d98914419a4",
+    "Content-Type": "application/json"
+  },
+  "method": "POST"
+}).then(function(response) {
+	console.log('Response : ',response.json());
+        return response.json();
+}).catch(e=>console.log('Error : ',e));
 
-function summarize(url){
-    fetch("https://flask-serverx.azurewebsites.net/getSummary", {
-        "body": JSON.stringify({"url":url}),
+
+
+fetch("http://127.0.0.1:5000/", {
+        "body": JSON.stringify({"url":"https://owasp.org/www-community/attacks/csrf"}),
         "method": "POST",
         "headers":{
-            "Content-Type": "application/json"
+                "Content-Type": "application/json"
         }
     }).then(response=> response.body). then(rb => {
         const reader = rb.getReader();
-        // https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream#example-fetch-stream
         return new ReadableStream({
         start(controller) {
             // The following function handles each data chunk
@@ -51,7 +56,7 @@ function summarize(url){
                     <div class="w3-container">
                         <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
                         <h1> Text Summary </h1>
-                        <p style="margin-bottom: 2em ; color="black" ">${result}</p>
+                        <p style="margin-bottom: 2em">${result}</p>
                     </div>
                 </div>
             </div>
@@ -62,18 +67,3 @@ function summarize(url){
         document.querySelector("body").prepend(newDiv);
         document.getElementById('id01').style.display='block';
   }).catch(e=>console.log('Error : ',e));
-}
-
-function highlight() {
-
-}
-
-chrome.runtime.onMessage.addListener(function(message){
-    if(message.action === 'Summarize') {
-        console.log('the url is : ',message.url)
-        summarize(message.url);
-    }
-    else if(message.action === "Highlight") {
-        highlight();
-    }
-});
