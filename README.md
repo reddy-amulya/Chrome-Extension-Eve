@@ -1,7 +1,7 @@
 # Chrome-Extension-Eve
 A chrome extension to perform text analysis on the webpage
 
-<img src="https://giphy.com/gifs/pixar-wall-e-walle-ktI31VYb7oG6k" />
+<img src="https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/main/giphy.gif />
 **Screenshots**\
 Here, I am using the eve extension to summarize this [article](https://ihsavru.medium.com/my-winter-internship-experience-at-hackerrank-banglore-8ae8a61aa594) .
 
