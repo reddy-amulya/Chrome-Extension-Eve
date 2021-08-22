@@ -5,3 +5,8 @@
     color:darkblue;
     margin-bottom: 0.5em;
 }
+
+.button5:hover {
+    background-color: #555555;
+    color: white;
+}

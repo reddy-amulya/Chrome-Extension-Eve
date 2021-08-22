@@ -1,6 +1,5 @@
 // Add functionality to highlight important parts of text
 // Add functionality to identify sentiment of text
-// modify popup UI
 // add code to handle incorrect input cases
 
 function summarize(url){
