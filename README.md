@@ -1,7 +1,8 @@
-<h1>Hey There!</h1>
-<p>
+<h1>Hi There!</h1>
+<h2>
 Eve is a chrome extension designed to perform various text analysis functions on the webpage.</br>
-</p>
+</h2>
+<h3>Current Functionality Available :</h3>
 <ul>
   <li>Text Summarization</li>
   <li>Highlighting Important Parts of The Webpage</li>
