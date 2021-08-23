@@ -1,6 +1,6 @@
 <h1>Hi There!</h1>
 <h2>
-Eve is a chrome extension designed to perform various text analysis functions on the webpage.</br>
+Eve is a chrome extension designed to perform various text analysis functions on the webpage.
 </h2>
 <h3>Current Functionality Available :</h3>
 <ul>
