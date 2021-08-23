@@ -25,4 +25,4 @@ Here, I am using the eve extension to summarize this [article](https://ihsavru.m
 That's it✨. You should now be able to see the Eve extension icon under the extensions drop down in the top right part of chrome.
 
 ### Architecture Diagram
-<p align="center">![Architecture Diagram](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/main/images/diagram.png)</p>
+<p align="center"> <img src="https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/main/images/diagram.png" /> </p>
