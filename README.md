@@ -14,3 +14,12 @@ Here, I am using the eve extension to summarize this [article](https://ihsavru.m
 
 ![The extension icon is clicked](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/rohan-krishna/summarize/images/Screenshot%20(351).png?raw=true)
 ![Result](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/rohan-krishna/summarize/images/Screenshot%20(350).png?raw=true)
+
+### How to Use :
+- Clone the repository to your machine
+- Open Google Chrome and go to `chrome://extensions`
+- Enable developer mode(top-right button) if not already enabled
+- Click on the 'load unpacked' button at the top-left of the screen
+- Select the cloned repository's folder
+
+That's it✨. You should now be able to see the Eve extension icon under the extensions drop down in the top right part of chrome.
