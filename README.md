@@ -1,7 +1,14 @@
 # Chrome-Extension-Eve
 A chrome extension to perform text analysis on the webpage
-
-<img src="https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/main/eve-wall-e.jpg" />
+<h1>Hey There!</h1>
+<p>
+Eve is a chrome extension designed to perform various text analysis functions on the webpage.</br>
+<ul>
+  <l1>Text Summarization</l1>
+  <l1>Highlighting Important Parts of The Webpage</l1>
+</ul>
+</p>
+<img src="https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/main/eve-wall-e.jpg" align="center"/>
 
 ## Screenshots
 Here, I am using the eve extension to summarize this [article](https://ihsavru.medium.com/my-winter-internship-experience-at-hackerrank-banglore-8ae8a61aa594) .
