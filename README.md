@@ -1,7 +1,8 @@
 # Hi There!
 
-### Eve is a chrome extension designed to perform various text analysis functions on the webpage.
-### Current Functionality Available :
+### Eve is a chrome extension designed to perform various text analysis functions on the webpage🌟
+
+### Features :
 <ul>
   <li>Text Summarization</li>
   <li>Highlighting Important Parts of The Webpage</li>
