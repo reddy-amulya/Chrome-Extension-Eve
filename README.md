@@ -1,6 +1,6 @@
-# Hi There!
+# Hi There🌟
 
-### Eve is a chrome extension designed to perform various text analysis functions on the webpage🌟
+### Eve is a chrome extension designed to perform various text analysis functions on the webpage <img src="images/4.png" alt="picture of eve" width="64"/>"
 
 ### Features :
 <ul>
