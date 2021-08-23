@@ -12,8 +12,8 @@
 ### Screenshots
 Here, I am using the eve extension to summarize this [article](https://ihsavru.medium.com/my-winter-internship-experience-at-hackerrank-banglore-8ae8a61aa594) .
 
-![The extension icon is clicked](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/rohan-krishna/summarize/images/Screenshot%20(367).png?raw=true)
-![Result](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/rohan-krishna/summarize/images/Screenshot%20(369).png?raw=true)
+![The extension icon is clicked](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/rohan-krishna/main/images/Screenshot%20(367).png?raw=true)
+![Result](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/rohan-krishna/main/images/Screenshot%20(369).png?raw=true)
 
 ### How to Use :
 - Clone the repository to your machine
