@@ -23,3 +23,6 @@ Here, I am using the eve extension to summarize this [article](https://ihsavru.m
 - Select the cloned repository's folder
 
 That's it✨. You should now be able to see the Eve extension icon under the extensions drop down in the top right part of chrome.
+
+### Architecture Diagram
+<p align="center">![Architecture Diagram](https://github.com/Kakarot-2000/Chrome-Extension-Eve/blob/main/images/diagram.png)</p>
