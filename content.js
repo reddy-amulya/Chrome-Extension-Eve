@@ -1,5 +1,4 @@
 // Add functionality to highlight important parts of text
-// Add functionality to identify sentiment of text
 // add code to handle incorrect input cases
 
 function summarize(url){
@@ -66,7 +65,7 @@ function summarize(url){
   }).catch(e=>console.log('Error : ',e));
 }
 
-function highlight() {
+function highlight(url) {
 
 }
 
@@ -76,6 +75,6 @@ chrome.runtime.onMessage.addListener(function(message){
         summarize(message.url);
     }
     else if(message.action === "Highlight") {
-        highlight();
+        highlight(message.url);
     }
 });
